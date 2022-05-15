@@ -11,8 +11,9 @@
 </head>
 
 <body>
-
-    <button onclick="divGenerator(16)">Click for divs </button>
+    <input type = 'range' min="16" max="100" value = "16"  oninput="divGenerator(this.value)">
+    <button onclick = "shake()">Shake!</button>
+    <button>RGB</button>
     <div id='container' class='grid'>
 
     </div>

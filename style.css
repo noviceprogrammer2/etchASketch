@@ -1,14 +1,52 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(var(--cols), 20px);
-    grid-template-rows: repeat(var(--rows), 20px);
-    gap: 2px;
-    height: 500px;
-    width: auto;
+
+    /* column and row amount is a variable that is defined during input stage of program */
+    /* based on input amount, grid columns and grid rows updates accordingly to generate that many rows or columns */
+    grid-template-columns: repeat(var(--cols) ,minmax(3px,1fr));
+    grid-template-rows: repeat(var(--rows), minmax(3px, 1fr)); /* min max specifies absolute minimum size being 6px where the max size is to fill the available space */
+    gap: 1px;
 }
 
+/* formatting for grid squares */
 .square {
     border: 1px;
     border-style: solid;
-    border-color:black;
+    border-color: black;
+}
+
+#container {
+    width: 700px;
+    height: 700px;
+    border: solid;
+
+}
+
+.shake {
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-direction:alternate;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+
+    40% {
+        transform: translateY(20px);
+    }
+    
+    60%{
+        transform: translateY(-20px);
+    }
+    80% {
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
