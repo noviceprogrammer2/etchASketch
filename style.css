@@ -8,17 +8,21 @@
     gap: 1px;
 }
 
+p, h1, h2, h3 {
+    margin: 0px;
+}
+
 /* formatting for grid squares */
 .square {
-    border: 1px;
-    border-style: solid;
-    border-color: black;
+   
+    background-color: lightgray;
 }
 
 #container {
     width: 700px;
     height: 700px;
     border: solid;
+    background-color: lightgray;
 
 }
 
@@ -49,4 +53,47 @@
     100%{
         transform: translateY(0px);
     }
+}
+
+@font-face {
+    font-family: 'Rondo'; /*a name to be used later*/
+    src: url('assets/rondo.ttf'); /*URL to font*/
+}
+
+.etchTextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    gap: 50px;
+}
+
+.etchText{
+    font-family: 'Rondo';
+    color: #d8bb5d;
+    font-size: 50px;
+}
+.knobContainer{
+    display: flex;
+    gap: 800px;
+    margin-bottom: 20px;
+    
+}
+.knob{
+    background-color: white;
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+}
+.etchBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    width: 1100px;
+    height: 900px;
+    background-color: #ce0a01;
+    border-radius: 10px;
+
 }
