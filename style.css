@@ -122,5 +122,23 @@ p, h1, h2, h3 {
 .inputContainer {
     display: flex;
     flex-direction: column;
-    max-width: 120px;
+    max-width: 140px;
+}
+.valueContainer{
+    font-family: 'Impact';
+    font-size: 18px;
+}
+.shakeButton {
+    background-color:gray;
+    height: 50px;
+    font-size: 20px;
+    color:white;
+    font-family:'Impact';
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 4px 4px 5px black;
+}
+
+.shakeButton:active{
+    transform: translateY(5px);
 }

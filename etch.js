@@ -9,7 +9,7 @@ function divGenerator(input) {
     // ^^generates divs
     console.log('function called')
     removeGrid()
-    output.innerHTML = input
+    output.innerHTML = `${input} x ${input}`
     // sets css vars to be whatever input is, so if its 16, it generates 16 rows and 16 cols
     layout.style.setProperty('--cols', input);
     layout.style.setProperty('--rows', input);
@@ -48,18 +48,19 @@ function shake() {
     console.log('shake triggered')
     etchBox.classList.add('shake');
     console.log(etchBox);
-    setTimeout(shakeClassGridRemove, 1000)
-    
+    setTimeout(shakeClassGridRemoveReset, 1000)
     
 
 
 }
 
-function shakeClassGridRemove(){
+function shakeClassGridRemoveReset(){
     etchBox.classList.remove('shake');
     divGenerator(16);
     console.log(etchBox)
     console.log('class and grid removed')
+    location.reload()
+
 }
 
 
