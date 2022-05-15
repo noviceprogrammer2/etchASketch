@@ -1,6 +1,7 @@
 const container = document.querySelector('#container'); // to work with container node to generate divs in
 let layout = document.querySelector('.grid') // to work with layout variable which represents the grid class in css
-
+const etchBox = document.querySelector('div.etchBox')
+var output = document.getElementById('number')
 divGenerator(16)
 
 
@@ -8,7 +9,7 @@ function divGenerator(input) {
     // ^^generates divs
     console.log('function called')
     removeGrid()
-
+    output.innerHTML = `${input} x ${input}`
     // sets css vars to be whatever input is, so if its 16, it generates 16 rows and 16 cols
     layout.style.setProperty('--cols', input);
     layout.style.setProperty('--rows', input);
@@ -18,7 +19,7 @@ function divGenerator(input) {
 
     for (let i = 0; i < gridArea; i++) { // create a div
         const div = document.createElement('div');
-
+        div.classList.add('square')
         // add event listener to generated div
         div.addEventListener('mouseover', colorFill)
         // add created div as a child to container
@@ -45,18 +46,22 @@ function removeGrid() {
 
 function shake() {
     console.log('shake triggered')
-    container.classList.add('shake');
-    console.log(container);
-    setTimeout(shakeClassGridRemove, 1000)
-    
+    etchBox.classList.add('shake');
+    console.log(etchBox);
+    setTimeout(shakeClassGridRemoveReset, 1000)
     
 
 
 }
 
-function shakeClassGridRemove(){
-    container.classList.remove('shake');
+function shakeClassGridRemoveReset(){
+    etchBox.classList.remove('shake');
     divGenerator(16);
-    console.log(container)
+    console.log(etchBox)
     console.log('class and grid removed')
+    location.reload()
+
 }
+
+
+

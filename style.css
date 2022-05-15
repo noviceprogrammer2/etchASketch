@@ -1,3 +1,17 @@
+html {
+    background-color: #F7DBD7;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: fit-content;
+    margin: auto;
+
+    gap: 70px;
+    
+}
 .grid {
     display: grid;
 
@@ -8,17 +22,23 @@
     gap: 1px;
 }
 
+p, h1, h2, h3 {
+    margin: 0px;
+}
+
 /* formatting for grid squares */
 .square {
-    border: 1px;
-    border-style: solid;
-    border-color: black;
+   
+    background-color: lightgray;
 }
 
 #container {
     width: 700px;
     height: 700px;
     border: solid;
+    border-radius: 10px;
+    border-width: 5px;
+    background-color: lightgray;
 
 }
 
@@ -49,4 +69,76 @@
     100%{
         transform: translateY(0px);
     }
+}
+
+@font-face {
+    font-family: 'Rondo'; /*a name to be used later*/
+    src: url('assets/rondo.ttf'); /*URL to font*/
+}
+
+.etchTextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    gap: 50px;
+}
+
+.etchText{
+    font-family: 'Rondo';
+    color: #d8bb5d;
+    font-size: 50px;
+}
+.knobContainer{
+    display: flex;
+    gap: 780px;
+    margin-bottom: 20px;
+    
+}
+.knob{
+    background-color: white;
+    border-radius: 50%;
+    border: solid;
+    height: 125px;
+    width: 125px;
+    box-shadow: 4px 4px 5px black;
+}
+.etchBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    width: 1100px;
+    height: 900px;
+    background-color: #ce0a01;
+    border-radius: 10px;
+    box-shadow: black;
+    margin-top: 100px;
+    box-shadow: 10px 10px 5px gray;
+
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 140px;
+}
+.valueContainer{
+    font-family: 'Impact';
+    font-size: 18px;
+}
+.shakeButton {
+    background-color:gray;
+    height: 50px;
+    font-size: 20px;
+    color:white;
+    font-family:'Impact';
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 4px 4px 5px black;
+}
+
+.shakeButton:active{
+    transform: translateY(5px);
 }

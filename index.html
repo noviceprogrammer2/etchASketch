@@ -8,14 +8,31 @@
     <title>Document</title>
     <link rel='stylesheet' href="style.css">
     <script src="etch.js" defer></script>
+    <link href="https://www.dafontfree.net/embed/cm9uZG8tcmVndWxhciZkYXRhLzM0L3IvMTQwOTc1L3JvbmRvLnR0Zg"
+        rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <input type = 'range' min="16" max="100" value = "16"  oninput="divGenerator(this.value)">
-    <button onclick = "shake()">Shake!</button>
-    <button>RGB</button>
-    <div id='container' class='grid'>
 
+    <div class='etchBox'>
+        <div class='etchTextContainer'>
+            <p style="font-weight: bold;font-style: italic; font-size: 25px; color:#d8bb5d">MAGIC</p>
+            <p class='etchText'>EtchASketch</p>
+            <p style="font-weight: bold;font-style: italic; font-size: 25px; color:#d8bb5d">SCREEN</p>
+        </div>
+        <div id='container' class='grid'>
+        </div>
+        <div class='knobContainer'>
+            <div class='knob'></div>
+            <div class='knob'></div>
+        </div>
+    </div>
+    <div class='inputContainer'>
+        <div class='valueContainer'>
+            <p>Grid Area: <span id = "number">test</span></p>
+        </div>
+        <input type='range' min="16" max="50" value="16" oninput="divGenerator(this.value)">
+        <button onclick="shake()" class = 'shakeButton'>Shake!</button>
     </div>
 </body>
 
