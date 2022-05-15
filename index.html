@@ -13,14 +13,12 @@
 </head>
 
 <body>
-    <input type='range' min="16" max="100" value="16" oninput="divGenerator(this.value)">
-    <button onclick="shake()">Shake!</button>
-    <button>RGB</button>
+
     <div class='etchBox'>
         <div class='etchTextContainer'>
-            <p style="font-style: italic; font-size: 25px; color:#d8bb5d">MAGIC</p>
-            <p class='etchText'>Etch A Sketch</p>
-            <p style="font-style: italic; font-size: 25px; color:#d8bb5d">SCREEN</p>
+            <p style="font-weight: bold;font-style: italic; font-size: 25px; color:#d8bb5d">MAGIC</p>
+            <p class='etchText'>EtchASketch</p>
+            <p style="font-weight: bold;font-style: italic; font-size: 25px; color:#d8bb5d">SCREEN</p>
         </div>
         <div id='container' class='grid'>
         </div>
@@ -28,6 +26,13 @@
             <div class='knob'></div>
             <div class='knob'></div>
         </div>
+    </div>
+    <div class='inputContainer'>
+        <div class='valueContainer'>
+            <p>Value: <span id = "number">test</span></p>
+        </div>
+        <input type='range' min="16" max="50" value="16" oninput="divGenerator(this.value)">
+        <button onclick="shake()">Shake!</button>
     </div>
 </body>
 
